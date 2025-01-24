@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 lg:px-24 my-10">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,16 +27,16 @@ const Navbar = () => {
               <li><a>Profile</a></li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Blog</a>
+          <Link href="/" className="btn btn-ghost text-xl">Next.<span>JS</span></Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden lg:flex ">
           <ul className="menu menu-horizontal px-1">
-          <li><a>Home</a></li>
-          <li><a>Profile</a></li>
+          <li className='mr-5'><Link href="/">Home</Link></li>
+          <li><a><Link href="/profile">Profile</Link></a></li>
           </ul>
         </div>
         <div className="navbar-end ">
-          <a className="btn">Login</a>
+        <Link href="/login" className='btn bg-purple-500 px-10 text-yellow-100 hover:text-purple-700'>Login</Link>
         </div>
       </div>
     );

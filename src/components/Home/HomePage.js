@@ -13,7 +13,7 @@ const HomePage = async () => {
     <ul className='p-10 grid lg:grid-cols-4 gap-5'>
         {blogPosts.map((post) => (
           <li key={post.id}
-          className='bg-purple-400 p-5'>
+          className='bg-purple-200 text-center p-5'>
           <Link href={`/posts/${post.id}`}>{post.title}</Link>
         </li>
         ))}
